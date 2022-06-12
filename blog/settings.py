@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&49ga4rqxrp)^w=%ed&s4qf0*)1yvl!$6j=e@b^^e=i-s3g+@+'
+SECRET_KEY = '2^u_db#ufj62z0of4wm&rz#ttyi88hwtyhw6t(!jq&wih^@qn)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,13 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "article",
-    "user",
+    'article',
+    'user',
     'crispy_forms',
-    "ckeditor",
-    'django_cleanup',
-
-    
+    'ckeditor',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
@@ -111,9 +109,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'tr'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Europe/Istanbul'
+
 
 USE_I18N = True
 
@@ -128,19 +127,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+
 ]
-STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
-
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 CKEDITOR_CONFIGS = {
     "default": {
         "removePlugins": "stylesheetparser",
-        "allowedContent" : True,
-        "width" : "100%",
+        "allowedContent": True,
+        "width": "%100",
     }
 }
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-

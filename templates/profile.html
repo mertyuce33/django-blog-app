@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="row" >
+    <div class="col-md-11 offset-md-2" style="left: 15px;">
+
+<hr>
+</div>
+</div>
+
+<div>
+        
+            <figure class="mb-4"><img class="img-fluid rounded" width='175'src="{{profile.user_image.url}}" alt="..." /></figure>
+            
+            <br>
+            <h5 class="fw-bolder mb-2">İsim: {{profile.name}}</h5>
+                
+            <h5 class="fw-bolder mb-2">Soyisim: {{profile.surname}}</h5>
+            <h5 class="fw-bolder mb-2">Email: {{profile.email}}</h5>
+            <hr>
+            <a href="/user/editprofile" class="btn btn-danger">Profil Düzenle</a>
+            
+                
+            
+            
+        
+    
+</div>
+
+{% endblock body %}
